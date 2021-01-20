@@ -17,8 +17,8 @@ class MainWindow(QMainWindow):
     def paintEvent(self, event):
         qp = QPainter()
         qp.begin(self)
-        qp.setBrush(QColor(255, 204, 0))
         for i in range(randrange(1, 7)):
+            qp.setBrush(QColor(randrange(255), randrange(255), randrange(255)))
             parm = randrange(15, 100)
             qp.drawEllipse(randrange(10, 400), randrange(10, 400), parm, parm)
         qp.end()
